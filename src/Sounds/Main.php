@@ -27,17 +27,17 @@ class Main extends PluginBase implements Listener {
 		$this->getLogger()->info(C::RED."Deactivated");
 	}
 	public function onJoin(PlayerJoinEvent $event){
-		$pl = $event->getEntity();
+		$pl = $event->getPlayer();
 		$level = $pl->getLevel();
 		$level->addSound(new PopSound($pl));
 	}
 	public function onDeath(PlayerDeathEvent $event){
-		$pl = $event->getEntity();
+		$pl = $event->getPlayer();
 		$level = $pl->getLevel();
 		$level->addSound(new AnvilFallSound($pl));
 	}
 	public function onQuit(PlayerQuitEvent $event){
-		$pl = $event->getEntity();
+		$pl = $event->getPlayer();
 		$level = $pl->getLevel();
 		$level->addSound(new EndermanTeleportSound($pl));
 	}
