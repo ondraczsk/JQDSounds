@@ -29,16 +29,16 @@ class Main extends PluginBase implements Listener {
 	public function onJoin(PlayerJoinEvent $event){
 		$player = $event->getPlayer();
 		$level = $pl->getLevel();
-		$player->getlevel()->addSound(new PopSound($pl));
+		$player->getlevel()->addSound(new PopSound($player));
 	}
 	public function onDeath(PlayerDeathEvent $event){
 		$player = $event->getPlayer();
 		$level = $pl->getLevel();
-		$player->getlevel()->addSound(new AnvilFallSound($pl));
+		$player->getlevel()->addSound(new AnvilFallSound($player));
 	}
 	public function onQuit(PlayerQuitEvent $event){
 		$player = $event->getPlayer();
 		$level = $pl->getLevel();
-		$player->getlevel()->addSound(new EndermanTeleportSound($pl));
+		$player->getlevel()->addSound(new EndermanTeleportSound($player));
 	}
 }
