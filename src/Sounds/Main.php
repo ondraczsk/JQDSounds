@@ -7,6 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat as C;
 use pocketmine\Player;
+use pocketmine\entity\Entity;
 use pocketmine\level\Position;
 use pocketmine\level\sound\EndermanTeleportSound;
 use pocketmine\level\sound\AnvilFallSound;
@@ -28,16 +29,16 @@ class Main extends PluginBase implements Listener {
 	public function onJoin(PlayerJoinEvent $event){
 		$pl = $event->getPlayer();
 		$level = $pl->getLevel();
-		$level->addSound(new PopSound($pl));
+		$player->getlevel()->addSound(new PopSound($pl));
 	}
 	public function onDeath(PlayerDeathEvent $event){
 		$pl = $event->getPlayer();
 		$level = $pl->getLevel();
-		$level->addSound(new AnvilFallSound($pl));
+		$player->getlevel()->addSound(new AnvilFallSound($pl));
 	}
 	public function onQuit(PlayerQuitEvent $event){
 		$pl = $event->getPlayer();
 		$level = $pl->getLevel();
-		$level->addSound(new EndermanTeleportSound($pl));
+		$player->getlevel()->addSound(new EndermanTeleportSound($pl));
 	}
 }
