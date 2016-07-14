@@ -7,7 +7,6 @@ use pocketmine\event\Listener;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat as C;
 use pocketmine\Player;
-use pocketmine\entity\Entity;
 use pocketmine\level\Position;
 use pocketmine\level\sound\EndermanTeleportSound;
 use pocketmine\level\sound\AnvilFallSound;
