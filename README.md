@@ -1,2 +1,2 @@
 # JQDSounds
-Join, Quit, Death Sounds for your UltimateMine Server
+Join, Quit, Death Sounds for your MC:PE Server
